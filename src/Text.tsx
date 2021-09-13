@@ -3,8 +3,8 @@ import React from "react";
 // const data = require("../tailwind.config.js");
 
 export interface Props {
-  children: any;
-  as: any;
+  children?: any;
+  as?: any;
   // as: String | FunctionComponent<{}> | ComponentClass<{}, any>;
   size?: 10 | 12 | 14 | 16 | 20 | 24 | 32 | 40 | 48;
   lineHeight?: 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56;

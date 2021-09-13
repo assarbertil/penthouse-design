@@ -7,9 +7,7 @@ const meta: Meta = {
   component: Text,
   argTypes: {
     onClick: { action: "clicked" },
-    children: {
-      defaultValue: "Default Text",
-    },
+    children: { defaultValue: "Default Text" },
   },
 };
 

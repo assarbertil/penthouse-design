@@ -1,42 +1,111 @@
-/* import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import React, { FC, useState } from "react";
 
-import { clickable } from "@/lib/animations";
+import { clickable } from "./lib/animations";
 import { IconCross } from "./Icons";
 
-export const Input = ({ prefix, suffix, placeholder, type, onChange }) => {
-  const [value, setValue] = useState("");
-  const [showX, setShowX] = useState(false);
+import { Colors } from "./ColorTypes";
 
-  return (
-    <motion.div
-      whileHover={clickable.hover}
-      className="flex items-center justify-start flex-grow px-2 text-gray-400 bg-gray-800 rounded-lg pointer-events-auto focus:outline-none h-11 shadow-button"
-    >
-      {prefix && <div className="mr-2">{prefix}</div>}
-      <input
-        onChange={e => {
-          e.target.value.length > 0 && setShowX(true);
-          setValue(e.target.value);
-          onChange && onChange(e.target);
-        }}
-        value={value}
-        className="w-full h-full bg-transparent focus:outline-none"
-        placeholder={placeholder}
-        type={type}
-      />
-      {suffix && suffix}
-      {showX && (
-        <button
-          onClick={() => {
-            setValue("");
-            setShowX(false);
+export interface Props {
+  prefix?: any;
+  placeholder: string;
+  type?: "email" | "number" | "password" | "search" | "tel" | "text";
+  color?: Colors;
+  onChange?: (e?: any) => any;
+  withCross?: boolean;
+  defaultValue?: string;
+  id?: string;
+  shadow?: boolean;
+  disabled?: boolean;
+  className?: string;
+}
+
+export const Input: FC<Props> = React.memo(
+  ({
+    prefix,
+    placeholder,
+    type = "text",
+    color = "gray",
+    onChange,
+    withCross = false,
+    defaultValue,
+    id,
+    shadow = false,
+    disabled = false,
+    className,
+  }) => {
+    const [value, setValue] = useState(() =>
+      defaultValue ? defaultValue : ""
+    );
+    const [showX, setShowX] = useState(() => (value.length > 0 ? true : false));
+
+    let containerClasses: string[] = [
+      "flex items-center justify-start w-64 p-2 px-2 rounded-lg pointer-events-auto focus:outline-none",
+    ];
+    let inputClasses: string[] = [
+      "w-full h-full bg-transparent focus:outline-none",
+    ];
+
+    switch (color) {
+      case "gray":
+        inputClasses.push("placeholder-gray-300");
+        containerClasses.push("bg-gray-800 text-gray-200");
+        break;
+      case "blue":
+        inputClasses.push("placeholder-blue-300");
+        containerClasses.push("bg-blue-900 text-blue-200");
+        break;
+      case "green":
+        inputClasses.push("placeholder-green-300");
+        containerClasses.push("bg-green-900 text-green-200");
+        break;
+      case "rose":
+        inputClasses.push("placeholder-rose-300");
+        containerClasses.push("bg-rose-900 text-rose-200");
+        break;
+      case "amber":
+        inputClasses.push("placeholder-amber-300");
+        containerClasses.push("bg-amber-900 text-amber-200");
+        break;
+    }
+
+    className && containerClasses.push(className);
+    shadow && containerClasses.push("shadow-button");
+    disabled && containerClasses.push("cursor-not-allowed bg-opacity-60");
+    disabled && inputClasses.push("cursor-not-allowed");
+
+    return (
+      <motion.div
+        whileHover={disabled ? "" : clickable.hover}
+        className={containerClasses.join(" ")}
+      >
+        {prefix && <span className="flex-shrink-0 w-5 h-5 mr-2">{prefix}</span>}
+        <input
+          id={id}
+          type={type}
+          value={value}
+          disabled={disabled}
+          placeholder={placeholder}
+          className={inputClasses.join(" ")}
+          onChange={(e) => {
+            setValue(e.target.value);
+            setShowX(e.target.value.length > 0 ? true : false);
+            console.log("log on change");
+            onChange && onChange(e);
           }}
-        >
-          <IconCross />
-        </button>
-      )}
-    </motion.div>
-  );
-};
- */
+        />
+        {withCross && showX && (
+          <button
+            className="flex-shrink-0 w-5 h-5 ml-2"
+            onClick={() => {
+              setValue("");
+              setShowX(false);
+            }}
+          >
+            <IconCross />
+          </button>
+        )}
+      </motion.div>
+    );
+  }
+);

@@ -1,4 +1,3 @@
-// export { Button } from './Button';
 export { Text } from "./Text";
+export { IconCross, IconSearch } from "./Icons";
 export { tailwindPreset } from "./tailwindPreset";
-// export const tailwindPreset = require("./tailwindPreset");

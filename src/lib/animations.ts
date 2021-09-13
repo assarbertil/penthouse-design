@@ -7,19 +7,17 @@ export const clickable = {
     transition: { duration: 0 },
   },
   tap: {
-    scale: 1.04,
     filter: "brightness(1.3)",
     transition: { duration: 0 },
   },
 };
 
-export const clickableNoScale = {
+export const clickableWithScale = {
   hover: {
-    filter: "brightness(1.4)",
-    transition: { duration: 0 },
+    ...clickable.hover,
   },
   tap: {
-    filter: "brightness(1.3)",
-    transition: { duration: 0 },
+    ...clickable.tap,
+    scale: 1.04,
   },
 };

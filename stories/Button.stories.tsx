@@ -1,14 +1,14 @@
-/* import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { Button, Props } from '../src/Button';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { Button, Props } from "../src/Button";
 
 const meta: Meta = {
-  title: 'Button',
+  title: "Button",
   component: Button,
   argTypes: {
-    onClick: { action: 'clicked' },
+    onClick: { action: "clicked" },
     children: {
-      defaultValue: 'Default Text',
+      defaultValue: "Default Text",
     },
   },
 };
@@ -22,7 +22,6 @@ export const Default = Template.bind({});
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-  variant: 'secondary',
-  children: 'i am secondary',
+  variant: "secondary",
+  children: "i am secondary",
 };
- */

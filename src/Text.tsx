@@ -1,13 +1,11 @@
 import React from "react";
 
-// const data = require("../tailwind.config.js");
-
 export interface Props {
   children?: any;
-  as?: any;
+  as?: string;
   // as: String | FunctionComponent<{}> | ComponentClass<{}, any>;
   size?: 10 | 12 | 14 | 16 | 20 | 24 | 32 | 40 | 48;
-  lineHeight?: 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56;
+  lineHeight?: "normal" | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56;
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
   transform?: "capitalize" | "uppercase" | "lowercase";
   align?: "left" | "center" | "right";
@@ -20,7 +18,7 @@ export const Text = ({
   children,
   as = "p",
   size = 14,
-  lineHeight,
+  lineHeight = "normal",
   weight,
   transform,
   align,
@@ -84,6 +82,9 @@ export const Text = ({
       break;
     case 56:
       classes.push("leading-56");
+      break;
+    default:
+      classes.push("normal");
   }
   switch (weight) {
     case 100:

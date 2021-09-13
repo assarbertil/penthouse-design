@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -76,5 +76,8 @@
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.2.1",
     "framer-motion": "^4.1.17"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }

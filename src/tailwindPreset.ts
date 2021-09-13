@@ -1,6 +1,6 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-module.exports = {
+export const tailwindPreset = {
   theme: {
     fontFamily: {
       sans: ["Inter", ...fontFamily.sans],

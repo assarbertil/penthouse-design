@@ -37,8 +37,8 @@ disabled.args = {
   disabled: true,
 };
 
-export const red = Template.bind({});
-red.args = {
+export const rose = Template.bind({});
+rose.args = {
   color: "rose",
 };
 

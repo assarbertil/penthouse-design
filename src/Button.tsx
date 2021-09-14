@@ -3,10 +3,11 @@ import React from "react";
 import { clickable } from "./lib/animations";
 import { motion } from "framer-motion";
 
-import { Colors } from "./ColorTypes";
+import { Colors } from "./lib/ColorTypes";
 
 export interface Props {
   children?: any;
+  icon?: any;
   onClick?: () => any;
   className?: string;
   as: "button" | "a";
@@ -20,6 +21,7 @@ export interface Props {
 
 export const Button = ({
   children,
+  icon,
   onClick,
   className,
   as = "button",
@@ -75,6 +77,7 @@ export const Button = ({
       type={type}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
+      {icon && icon}
       {children}
       {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.button>
@@ -88,6 +91,7 @@ export const Button = ({
       type={type}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
+      {icon && icon}
       {children}
       {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.a>

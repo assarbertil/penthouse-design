@@ -4,7 +4,7 @@ import React, { FC, useState } from "react";
 import { clickable } from "./lib/animations";
 import { IconCross } from "./Icons";
 
-import { Colors } from "./ColorTypes";
+import { Colors } from "./lib/ColorTypes";
 
 export interface Props {
   prefix?: any;

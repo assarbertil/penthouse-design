@@ -18,6 +18,7 @@ export const tailwindPreset = {
       48: "3rem",
     },
     lineHeight: {
+      none: 1,
       base: "1.5",
       12: "0.75rem",
       16: "1rem",

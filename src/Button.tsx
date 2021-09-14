@@ -33,15 +33,15 @@ export const Button = ({
   suffix,
 }: Props) => {
   let classes: string[] = [
-    "flex items-center justify-center pointer-events-auto rounded-lg focus:outline-none shadow-button w-min whitespace-nowrap",
+    "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button w-min whitespace-nowrap",
   ];
 
   switch (size) {
     case "sm":
-      classes.push("px-2 py-1 text-14 rounded-md");
+      classes.push("px-2 py-2 text-14 rounded-md");
       break;
     case "base":
-      classes.push("p-2 rounded-lg");
+      classes.push("p-3 rounded-lg");
       break;
     case "lg":
       classes.push("p-4  rounded-lg");
@@ -53,16 +53,16 @@ export const Button = ({
       classes.push("text-gray-300 bg-gray-800");
       break;
     case "blue":
-      classes.push("text-blue-200 bg-blue-800");
+      classes.push("text-blue-50 bg-blue-800");
       break;
     case "green":
-      classes.push("text-green-200 bg-green-800");
+      classes.push("text-green-50 bg-green-800");
       break;
     case "rose":
-      classes.push("text-rose-200 bg-rose-800");
+      classes.push("text-rose-50 bg-rose-800");
       break;
     case "amber":
-      classes.push("text-amber-200 bg-amber-800");
+      classes.push("text-amber-50 bg-amber-800");
       break;
   }
 
@@ -76,10 +76,10 @@ export const Button = ({
       onClick={onClick}
       type={type}
     >
-      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && <span className="w-5 h-5">{icon}</span>}
+      {prefix && <span className="w-4 h-4 mr-2">{prefix}</span>}
+      {icon && <span className="w-4 h-4">{icon}</span>}
       {children}
-      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
+      {suffix && <span className="w-4 h-4 ml-2">{suffix}</span>}
     </motion.button>
   ) : (
     <motion.a
@@ -90,10 +90,10 @@ export const Button = ({
       onClick={onClick}
       type={type}
     >
-      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && <span className="w-5 h-5">{icon}</span>}
+      {prefix && <span className="w-4 h-4 mr-2">{prefix}</span>}
+      {icon && <span className="w-4 h-4">{icon}</span>}
       {children}
-      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
+      {suffix && <span className="w-4 h-4 ml-2">{suffix}</span>}
     </motion.a>
   );
 };

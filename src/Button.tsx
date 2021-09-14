@@ -77,7 +77,7 @@ export const Button = ({
       type={type}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && icon}
+      {icon && <span className="w-5 h-5">{icon}</span>}
       {children}
       {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.button>
@@ -91,7 +91,7 @@ export const Button = ({
       type={type}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && icon}
+      {icon && <span className="w-5 h-5">{icon}</span>}
       {children}
       {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.a>

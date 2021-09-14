@@ -26,6 +26,12 @@ withPrefixAndSuffix.args = {
   suffix: <IconCross />,
 };
 
+export const iconButton = Template.bind({});
+iconButton.args = {
+  children: "",
+  icon: <IconCross />,
+};
+
 export const rose = Template.bind({});
 rose.args = {
   color: "rose",

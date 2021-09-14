@@ -29,7 +29,7 @@ withPrefixAndSuffix.args = {
 export const iconButton = Template.bind({});
 iconButton.args = {
   children: "",
-  icon: <IconCross />,
+  icon: <IconCross className="w-full h-full" />,
 };
 
 export const rose = Template.bind({});

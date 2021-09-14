@@ -1,11 +1,12 @@
 import React from "react";
 
-export const IconSearch = () => (
+export const IconSearch = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    {...props}
   >
     <path
       strokeLinecap="round"
@@ -16,12 +17,13 @@ export const IconSearch = () => (
   </svg>
 );
 
-export const IconCross = () => (
+export const IconCross = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    {...props}
   >
     <path
       strokeLinecap="round"

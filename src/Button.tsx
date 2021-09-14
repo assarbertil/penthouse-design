@@ -38,13 +38,13 @@ export const Button = ({
 
   switch (size) {
     case "sm":
-      classes.push("px-2 py-2 text-14 rounded-md");
+      classes.push("p-2 text-14 rounded-md");
       break;
     case "base":
       classes.push("p-3 rounded-lg");
       break;
     case "lg":
-      classes.push("p-4  rounded-lg");
+      classes.push("p-4 rounded-lg");
       break;
   }
 
@@ -76,10 +76,10 @@ export const Button = ({
       onClick={onClick}
       type={type}
     >
-      {prefix && <span className="w-4 h-4 mr-2">{prefix}</span>}
-      {icon && <span className="w-4 h-4">{icon}</span>}
-      {children}
-      {suffix && <span className="w-4 h-4 ml-2">{suffix}</span>}
+      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
+      {icon && <span className="w-5 h-5">{icon}</span>}
+      {children && <span>{children}</span>}
+      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.button>
   ) : (
     <motion.a

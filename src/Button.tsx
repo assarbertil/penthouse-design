@@ -17,6 +17,7 @@ export interface Props {
   color?: Colors;
   prefix?: any;
   suffix?: any;
+  style?: React.CSSProperties;
 }
 
 export const Button = ({
@@ -31,6 +32,7 @@ export const Button = ({
   color = "gray",
   prefix,
   suffix,
+  style,
 }: Props) => {
   let classes: string[] = [
     "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button w-min whitespace-nowrap",
@@ -75,6 +77,7 @@ export const Button = ({
       className={classes.join(" ")}
       onClick={onClick}
       type={type}
+      style={style}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
       {icon && <span className="w-5 h-5">{icon}</span>}
@@ -89,6 +92,7 @@ export const Button = ({
       className={classes.join(" ")}
       onClick={onClick}
       type={type}
+      style={style}
     >
       {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
       {icon && <span className="w-5 h-5">{icon}</span>}

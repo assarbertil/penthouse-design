@@ -18,6 +18,7 @@ export interface Props {
   shadow?: boolean;
   disabled?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Input: FC<Props> = React.memo(
@@ -78,6 +79,7 @@ export const Input: FC<Props> = React.memo(
     return (
       <motion.div
         whileHover={disabled ? "" : clickable.hover}
+        whileTap={disabled ? "" : clickable.tap}
         className={containerClasses.join(" ")}
       >
         {prefix && <span className="flex-shrink-0 w-5 h-5 mr-2">{prefix}</span>}

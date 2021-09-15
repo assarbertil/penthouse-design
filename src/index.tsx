@@ -6,4 +6,4 @@ export { IconCross, IconSearch } from "./Icons";
 
 export * from "./lib/animations";
 
-export { tailwindPreset } from "./tailwindPreset";
+export { tailwindPreset, safelist } from "./tailwindPreset";

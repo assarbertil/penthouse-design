@@ -43,7 +43,9 @@ export const Button = ({
       classes.push("p-2 text-14 rounded-md");
       break;
     case "base":
-      classes.push("p-3 rounded-lg");
+      classes.push(
+        `${prefix || suffix || icon ? "p-[0.625rem]" : "p-3"} rounded-lg`
+      );
       break;
     case "lg":
       classes.push("p-4 rounded-lg");

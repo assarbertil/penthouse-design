@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { Input, Props } from "../src/components/Input";
 
-import { IconCross, IconSearch } from "../src/icons";
+import { IconCross, IconSearch } from "../src/Icons";
 
 const meta: Meta = {
   title: "Input",

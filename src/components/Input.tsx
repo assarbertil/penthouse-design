@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
 import { clickable } from "../animations";
-import { IconCross } from "../icons";
+import { IconCross } from "../Icons";
 
 import { Colors } from "../lib/ColorTypes";
 
@@ -75,6 +75,7 @@ export const Input: FC<Props> = React.memo(
     shadow && containerClasses.push("shadow-button");
     disabled && containerClasses.push("cursor-not-allowed bg-opacity-60");
     disabled && inputClasses.push("cursor-not-allowed");
+    prefix ? "p-[0.625rem]" : "p-3";
 
     return (
       <motion.div

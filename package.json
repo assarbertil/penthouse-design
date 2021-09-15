@@ -37,7 +37,7 @@
   },
   "name": "penthouse-design",
   "author": "Assar C",
-  "module": "index.esm.js",
+  "module": "dist/penthouse-design.esm.js",
   "size-limit": [
     {
       "path": "dist/penthouse-design.cjs.production.min.js",

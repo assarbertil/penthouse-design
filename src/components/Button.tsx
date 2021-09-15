@@ -1,9 +1,9 @@
 import React from "react";
 
-import { clickable } from "./lib/animations";
+import { clickable } from "../animations";
 import { motion } from "framer-motion";
 
-import { Colors } from "./lib/ColorTypes";
+import { Colors } from "../lib/ColorTypes";
 
 export interface Props {
   children?: any;

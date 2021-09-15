@@ -1,3 +1,3 @@
-export { Text } from "./Text";
-export { Button } from "./Button";
-export { Input } from "./Input";
+export { Text } from "./components/Text";
+export { Button } from "./components/Button";
+export { Input } from "./components/Input";

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
-import { clickable } from "./lib/animations";
-import { IconCross } from "./icons";
+import { clickable } from "../animations";
+import { IconCross } from "../icons";
 
-import { Colors } from "./lib/ColorTypes";
+import { Colors } from "../lib/ColorTypes";
 
 export interface Props {
   prefix?: any;

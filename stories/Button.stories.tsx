@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { Button, Props } from "../src/Button";
+import { Button, Props } from "../src/components/Button";
 
-import { IconCross, IconSearch } from "../src/Icons";
+import { IconCross, IconSearch } from "../src/icons";
 
 const meta: Meta = {
   title: "Button",
@@ -29,7 +29,7 @@ withPrefixAndSuffix.args = {
 export const iconButton = Template.bind({});
 iconButton.args = {
   children: "",
-  icon: <IconCross className="w-full h-full" />,
+  icon: <IconCross />,
 };
 
 export const rose = Template.bind({});

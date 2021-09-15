@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
 import { clickable } from "./lib/animations";
-import { IconCross } from "./Icons";
+import { IconCross } from "./icons";
 
 import { Colors } from "./lib/ColorTypes";
 

@@ -80,6 +80,7 @@ export const Input: FC<Props> = React.memo(
         className={containerClasses.join(" ")}
       >
         {prefix && <span className="flex-shrink-0 w-5 h-5 mr-2">{prefix}</span>}
+
         <input
           id={id}
           type={type}
@@ -94,6 +95,7 @@ export const Input: FC<Props> = React.memo(
             onChange && onChange(e);
           }}
         />
+
         {withCross && showX && (
           <button
             className="flex-shrink-0 w-5 h-5 ml-2"

@@ -90,10 +90,10 @@ export const Button = ({
       onClick={onClick}
       type={type}
     >
-      {prefix && <span className="w-4 h-4 mr-2">{prefix}</span>}
-      {icon && <span className="w-4 h-4">{icon}</span>}
+      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
+      {icon && <span className="w-5 h-5">{icon}</span>}
       {children}
-      {suffix && <span className="w-4 h-4 ml-2">{suffix}</span>}
+      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
     </motion.a>
   );
 };

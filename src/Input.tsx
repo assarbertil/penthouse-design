@@ -40,7 +40,7 @@ export const Input: FC<Props> = React.memo(
     const [showX, setShowX] = useState(() => (value.length > 0 ? true : false));
 
     let containerClasses: string[] = [
-      "flex items-center justify-start w-64 p-2 px-2 rounded-lg pointer-events-auto focus:outline-none",
+      "flex items-center justify-start w-full p-2 px-2 rounded-lg pointer-events-auto focus:outline-none",
     ];
     let inputClasses: string[] = [
       "w-full h-full bg-transparent focus:outline-none",

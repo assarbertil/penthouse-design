@@ -55,16 +55,16 @@ export const Button = ({
       classes.push("text-gray-300 bg-gray-800");
       break;
     case "blue":
-      classes.push("text-blue-50 bg-blue-800");
+      classes.push("text-blue-50 bg-blue-900");
       break;
     case "green":
-      classes.push("text-green-50 bg-green-800");
+      classes.push("text-green-50 bg-green-900");
       break;
     case "rose":
-      classes.push("text-rose-50 bg-rose-800");
+      classes.push("text-rose-50 bg-rose-900");
       break;
     case "amber":
-      classes.push("text-amber-50 bg-amber-800");
+      classes.push("text-amber-50 bg-amber-900");
       break;
   }
 

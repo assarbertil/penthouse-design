@@ -14,6 +14,7 @@ export interface Props {
   onChange?: (e?: any) => any;
   withCross?: boolean;
   defaultValue?: string;
+  size?: "sm" | "base" | "lg";
   id?: string;
   shadow?: boolean;
   disabled?: boolean;
@@ -32,6 +33,7 @@ export const Input: FC<Props> = React.memo(
     defaultValue,
     id,
     shadow = false,
+    size = "base",
     disabled = false,
     className,
     style,
@@ -47,6 +49,22 @@ export const Input: FC<Props> = React.memo(
     let inputClasses: string[] = [
       "w-full h-10 bg-transparent focus:outline-none",
     ];
+    let iconClasses: string[] = ["flex-shrink-0"];
+
+    switch (size) {
+      case "sm":
+        containerClasses.push("px-2 h-7 text-14 rounded-md");
+        iconClasses.push("w-4 h-4");
+        break;
+      case "base":
+        containerClasses.push("px-3 h-9 text-16 rounded-lg");
+        iconClasses.push("w-5 h-5");
+        break;
+      case "lg":
+        containerClasses.push("px-4 h-11 text-16 rounded-lg");
+        iconClasses.push("w-5 h-5");
+        break;
+    }
 
     switch (color) {
       case "gray":
@@ -75,7 +93,6 @@ export const Input: FC<Props> = React.memo(
     shadow && containerClasses.push("shadow-button");
     disabled && containerClasses.push("cursor-not-allowed bg-opacity-60");
     disabled && inputClasses.push("cursor-not-allowed");
-    prefix ? "p-[0.625rem]" : "p-3";
 
     return (
       <motion.div
@@ -83,7 +100,9 @@ export const Input: FC<Props> = React.memo(
         whileTap={disabled ? "" : clickable.tap}
         className={containerClasses.join(" ")}
       >
-        {prefix && <span className="flex-shrink-0 w-5 h-5 mr-2">{prefix}</span>}
+        {prefix && (
+          <span className={`${iconClasses.join(" ")} mr-2`}>{prefix}</span>
+        )}
 
         <input
           id={id}
@@ -103,7 +122,7 @@ export const Input: FC<Props> = React.memo(
 
         {withCross && showX && (
           <button
-            className="flex-shrink-0 w-5 h-5 ml-2"
+            className={`${iconClasses.join(" ")} ml-2`}
             onClick={() => {
               setValue("");
               setShowX(false);

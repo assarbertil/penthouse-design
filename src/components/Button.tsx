@@ -37,18 +37,20 @@ export const Button = ({
   let classes: string[] = [
     "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button w-min whitespace-nowrap",
   ];
+  let iconClasses: string[] = [""];
 
   switch (size) {
     case "sm":
-      classes.push("p-2 text-14 rounded-md");
+      classes.push("px-2 rounded-md h-7 text-14");
+      iconClasses.push("w-4 h-4");
       break;
     case "base":
-      classes.push(
-        `${prefix || suffix || icon ? "p-[0.625rem]" : "p-3"} rounded-lg`
-      );
+      classes.push("px-3 rounded-lg h-9 text-16");
+      iconClasses.push("w-5 h-5");
       break;
     case "lg":
-      classes.push("p-4 rounded-lg");
+      classes.push("px-4 rounded-lg h-11 text-16");
+      iconClasses.push("w-5 h-5");
       break;
   }
 
@@ -81,10 +83,16 @@ export const Button = ({
       type={type}
       style={style}
     >
-      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && <span className="w-5 h-5">{icon}</span>}
-      {children && <span>{children}</span>}
-      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
+      {prefix && (
+        <span className={`${iconClasses.join(" ")} mr-2`}>{prefix}</span>
+      )}
+      {icon && <span className={iconClasses.join(" ")}>{icon}</span>}
+      {children && (
+        <span className={size === "sm" ? "mb-[1px]" : ""}>{children}</span>
+      )}
+      {suffix && (
+        <span className={`${iconClasses.join(" ")} ml-2`}>{suffix}</span>
+      )}
     </motion.button>
   ) : (
     <motion.a
@@ -96,10 +104,16 @@ export const Button = ({
       type={type}
       style={style}
     >
-      {prefix && <span className="w-5 h-5 mr-2">{prefix}</span>}
-      {icon && <span className="w-5 h-5">{icon}</span>}
-      {children}
-      {suffix && <span className="w-5 h-5 ml-2">{suffix}</span>}
+      {prefix && (
+        <span className={`${iconClasses.join(" ")} mr-2`}>{prefix}</span>
+      )}
+      {icon && <span className={iconClasses.join(" ")}>{icon}</span>}
+      {children && (
+        <span className={size === "sm" ? "mb-[1px]" : ""}>{children}</span>
+      )}
+      {suffix && (
+        <span className={`${iconClasses.join(" ")} ml-2`}>{suffix}</span>
+      )}
     </motion.a>
   );
 };

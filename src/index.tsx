@@ -3,5 +3,5 @@ export { Button } from "./components/Button";
 export { Input } from "./components/Input";
 
 export * from "./animations";
-export { IconCross, IconSearch } from "./Icons";
+export * from "./Icons";
 export { tailwindPreset } from "./theme";

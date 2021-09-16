@@ -35,21 +35,21 @@ export const Button = ({
   style,
 }: Props) => {
   let classes: string[] = [
-    "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button w-min whitespace-nowrap",
+    "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button whitespace-nowrap",
   ];
   let iconClasses: string[] = [""];
 
   switch (size) {
     case "sm":
-      classes.push(`${icon ? "w-7" : "px-2"} rounded-md h-7 text-14`);
+      classes.push(`${icon ? "w-7" : "px-2 w-min"} rounded-md h-7 text-14`);
       iconClasses.push("w-4 h-4");
       break;
     case "base":
-      classes.push(`${icon ? "w-9" : "px-3"} rounded-lg h-9 text-16`);
+      classes.push(`${icon ? "w-9" : "px-3 w-min"} rounded-lg h-9 text-16`);
       iconClasses.push("w-5 h-5");
       break;
     case "lg":
-      classes.push(`${icon ? "w-11" : "px-4"} rounded-lg h-11 text-16`);
+      classes.push(`${icon ? "w-11" : "px-4 w-min"} rounded-lg h-11 text-16`);
       iconClasses.push("w-5 h-5");
       break;
   }

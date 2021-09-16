@@ -41,15 +41,15 @@ export const Button = ({
 
   switch (size) {
     case "sm":
-      classes.push("px-2 rounded-md h-7 text-14");
+      classes.push(`${icon ? "w-7" : "px-2"} rounded-md h-7 text-14`);
       iconClasses.push("w-4 h-4");
       break;
     case "base":
-      classes.push("px-3 rounded-lg h-9 text-16");
+      classes.push(`${icon ? "w-9" : "px-3"} rounded-lg h-9 text-16`);
       iconClasses.push("w-5 h-5");
       break;
     case "lg":
-      classes.push("px-4 rounded-lg h-11 text-16");
+      classes.push(`${icon ? "w-11" : "px-4"} rounded-lg h-11 text-16`);
       iconClasses.push("w-5 h-5");
       break;
   }

@@ -58,19 +58,19 @@ export const CheckboxButton: FC<Props> = ({
 
   switch (color) {
     case "gray":
-      labelClasses.push("text-gray-50 bg-gray-800 border-gray-700");
+      labelClasses.push("text-gray-50 bg-gray-800 border-gray-800");
       break;
     case "blue":
-      labelClasses.push("text-blue-50 bg-blue-900 border-blue-800");
+      labelClasses.push("text-blue-50 bg-blue-900 border-blue-900");
       break;
     case "green":
-      labelClasses.push("text-green-50 bg-green-900 border-green-800");
+      labelClasses.push("text-green-50 bg-green-900 border-green-900");
       break;
     case "rose":
-      labelClasses.push("text-rose-50 bg-rose-900 border-rose-800");
+      labelClasses.push("text-rose-50 bg-rose-900 border-rose-900");
       break;
     case "amber":
-      labelClasses.push("text-amber-50 bg-amber-900 border-amber-800");
+      labelClasses.push("text-amber-50 bg-amber-900 border-amber-900");
       break;
   }
 

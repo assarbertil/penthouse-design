@@ -14,6 +14,7 @@ export interface Props {
   prefix?: any;
   suffix?: any;
   style?: React.CSSProperties;
+  checked?: boolean;
   defaultChecked?: boolean;
 }
 
@@ -27,6 +28,7 @@ export const CheckboxButton: FC<Props> = ({
   prefix,
   suffix,
   style,
+  checked?;
   defaultChecked = true,
 }) => {
   let labelClasses: string[] = [
@@ -88,7 +90,7 @@ export const CheckboxButton: FC<Props> = ({
         name={children}
         className="hidden peer"
         type="checkbox"
-        defaultChecked={defaultChecked}
+        checked={defaultChecked}
         onChange={onChange && onChange}
       />
       <label

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { clickable } from "../animations";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ export interface Props {
   style?: React.CSSProperties;
 }
 
-export const Button = ({
+export const Button: FC<Props> = ({
   children,
   icon,
   onClick,
@@ -33,7 +33,7 @@ export const Button = ({
   prefix,
   suffix,
   style,
-}: Props) => {
+}) => {
   let classes: string[] = [
     "flex items-center justify-center pointer-events-auto rounded-lg leading-none focus:outline-none shadow-button whitespace-nowrap",
   ];

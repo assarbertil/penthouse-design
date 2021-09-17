@@ -115,7 +115,6 @@ export const Input: FC<Props> = React.memo(
           onChange={(e) => {
             setValue(e.target.value);
             setShowX(e.target.value.length > 0 ? true : false);
-            console.log("log on change");
             onChange && onChange(e);
           }}
         />

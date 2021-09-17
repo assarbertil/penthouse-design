@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 
-import { clickable } from "../animations";
+import { clickable, appear } from "../animations";
 import { Colors } from "../lib/ColorTypes";
 
 export interface Props {
@@ -81,6 +81,7 @@ export const CheckboxButton: FC<Props> = ({
       whileHover={clickable.hover}
       whileTap={clickable.tap}
       className={containerClasses.join(" ")}
+      variants={appear}
     >
       <input
         id={children}

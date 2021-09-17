@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { FC, useState, useEffect } from "react";
 
-import { clickable } from "../animations";
+import { clickable, appear } from "../animations";
 import { IconCross } from "../Icons";
 
 import { Colors } from "../lib/ColorTypes";
@@ -101,6 +101,7 @@ export const Input: FC<Props> = React.memo(
         whileHover={disabled ? "" : clickable.hover}
         whileTap={disabled ? "" : clickable.tap}
         className={containerClasses.join(" ")}
+        variants={appear}
       >
         {prefix && (
           <span className={`${iconClasses.join(" ")} mr-2`}>{prefix}</span>

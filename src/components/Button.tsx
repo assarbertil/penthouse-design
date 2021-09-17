@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { clickable } from "../animations";
+import { clickable, appear } from "../animations";
 import { motion } from "framer-motion";
 
 import { Colors } from "../lib/ColorTypes";
@@ -94,6 +94,7 @@ export const Button: FC<Props> = ({
       onClick={onClick}
       type={type}
       style={style}
+      variants={appear}
     >
       {prefix && (
         <span className={`${iconClasses.join(" ")} mr-2`}>{prefix}</span>

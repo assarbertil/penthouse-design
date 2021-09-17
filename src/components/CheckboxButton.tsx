@@ -83,7 +83,7 @@ export const CheckboxButton: FC<Props> = ({
   className && classes.push(className);
 
   return (
-    <div>
+    <motion.div whileHover={clickable.hover} whileTap={clickable.tap}>
       <input
         id={children}
         className="hidden peer"
@@ -98,6 +98,6 @@ export const CheckboxButton: FC<Props> = ({
       >
         {children}
       </label>
-    </div>
+    </motion.div>
   );
 };

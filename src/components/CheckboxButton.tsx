@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-
-import { clickable } from "../animations";
 import { motion } from "framer-motion";
 
+import { clickable } from "../animations";
 import { Colors } from "../lib/ColorTypes";
 
 export interface Props {
@@ -31,7 +30,7 @@ export const CheckboxButton: FC<Props> = ({
   defaultChecked = true,
 }) => {
   let classes: string[] = [
-    "flex items-center justify-between px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
+    "flex items-center justify-between pointer-events-auto px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
   ];
   let iconClasses: string[] = [""];
 
@@ -86,6 +85,7 @@ export const CheckboxButton: FC<Props> = ({
     <motion.div whileHover={clickable.hover} whileTap={clickable.tap}>
       <input
         id={children}
+        name={children}
         className="hidden peer"
         type="checkbox"
         defaultChecked={defaultChecked}

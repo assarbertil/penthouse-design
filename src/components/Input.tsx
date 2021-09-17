@@ -122,7 +122,7 @@ export const Input: FC<Props> = React.memo(
         {withCross && showX && (
           <button
             className={`${iconClasses.join(" ")} ml-2`}
-            onClick={(e) => {
+            onClick={() => {
               setValue("");
               setShowX(false);
               onChange && onChange(value);

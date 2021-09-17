@@ -115,7 +115,7 @@ export const Input: FC<Props> = React.memo(
           onChange={(e) => {
             setValue(e.target.value);
             setShowX(e.target.value.length > 0 ? true : false);
-            onChange && onChange(e);
+            onChange && onChange(value);
           }}
         />
 
@@ -125,7 +125,7 @@ export const Input: FC<Props> = React.memo(
             onClick={(e) => {
               setValue("");
               setShowX(false);
-              onChange && onChange(e);
+              onChange && onChange(value);
             }}
           >
             <IconCross />

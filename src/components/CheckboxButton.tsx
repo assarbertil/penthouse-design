@@ -29,27 +29,27 @@ export const CheckboxButton: FC<Props> = ({
   style,
   defaultChecked = true,
 }) => {
-  let classes: string[] = [
-    "flex items-center justify-center pointer-events-auto px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
+  let labelClasses: string[] = [
+    "flex items-center justify-center px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
   ];
-  let containerClasses: string[] = [""];
+  let containerClasses: string[] = ["pointer-events-auto"];
   let iconClasses: string[] = [];
 
   switch (size) {
     case "sm":
-      classes.push(
+      labelClasses.push(
         `${icon || prefix || suffix ? "w-7" : "px-2"} rounded-md h-7 text-14`
       );
       iconClasses.push("w-4 h-4");
       break;
     case "base":
-      classes.push(
+      labelClasses.push(
         `${icon || prefix || suffix ? "w-9" : "px-3"} rounded-lg h-9 text-16`
       );
       iconClasses.push("w-5 h-5");
       break;
     case "lg":
-      classes.push(
+      labelClasses.push(
         `${icon || prefix || suffix ? "w-11" : "px-4"} rounded-lg h-11 text-16`
       );
       iconClasses.push("w-5 h-5");
@@ -58,19 +58,19 @@ export const CheckboxButton: FC<Props> = ({
 
   switch (color) {
     case "gray":
-      classes.push("text-gray-300 bg-gray-800 border-gray-600");
+      labelClasses.push("text-gray-50 bg-gray-800 border-gray-700");
       break;
     case "blue":
-      classes.push("text-blue-50 bg-blue-900 border-blue-700");
+      labelClasses.push("text-blue-50 bg-blue-900 border-blue-800");
       break;
     case "green":
-      classes.push("text-green-50 bg-green-900 border-green-700");
+      labelClasses.push("text-green-50 bg-green-900 border-green-800");
       break;
     case "rose":
-      classes.push("text-rose-50 bg-rose-900 border-rose-700");
+      labelClasses.push("text-rose-50 bg-rose-900 border-rose-800");
       break;
     case "amber":
-      classes.push("text-amber-50 bg-amber-900 border-amber-700");
+      labelClasses.push("text-amber-50 bg-amber-900 border-amber-800");
       break;
   }
 
@@ -92,7 +92,7 @@ export const CheckboxButton: FC<Props> = ({
       />
       <label
         htmlFor={children}
-        className={classes.join(" ")}
+        className={labelClasses.join(" ")}
         style={style && style}
       >
         {children}

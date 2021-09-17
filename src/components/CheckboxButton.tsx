@@ -30,33 +30,27 @@ export const CheckboxButton: FC<Props> = ({
   defaultChecked = true,
 }) => {
   let classes: string[] = [
-    "flex items-center justify-between pointer-events-auto px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
+    "flex items-center justify-center pointer-events-auto px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
   ];
-  let containerClasses: string[] = [];
+  let containerClasses: string[] = [""];
   let iconClasses: string[] = [];
 
   switch (size) {
     case "sm":
       classes.push(
-        `${
-          icon || prefix || suffix ? "w-7" : "px-2 w-min"
-        } rounded-md h-7 text-14`
+        `${icon || prefix || suffix ? "w-7" : "px-2"} rounded-md h-7 text-14`
       );
       iconClasses.push("w-4 h-4");
       break;
     case "base":
       classes.push(
-        `${
-          icon || prefix || suffix ? "w-9" : "px-3 w-min"
-        } rounded-lg h-9 text-16`
+        `${icon || prefix || suffix ? "w-9" : "px-3"} rounded-lg h-9 text-16`
       );
       iconClasses.push("w-5 h-5");
       break;
     case "lg":
       classes.push(
-        `${
-          icon || prefix || suffix ? "w-11" : "px-4 w-min"
-        } rounded-lg h-11 text-16`
+        `${icon || prefix || suffix ? "w-11" : "px-4"} rounded-lg h-11 text-16`
       );
       iconClasses.push("w-5 h-5");
       break;

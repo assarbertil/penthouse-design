@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 
 import { clickable } from "../animations";
 import { IconCross } from "../Icons";
@@ -42,6 +42,8 @@ export const Input: FC<Props> = React.memo(
       defaultValue ? defaultValue : ""
     );
     const [showX, setShowX] = useState(() => (value.length > 0 ? true : false));
+
+    useEffect(() => onChange && onChange(value), [value]);
 
     let containerClasses: string[] = [
       "flex items-center justify-start w-full px-2 rounded-lg pointer-events-auto focus:outline-none",
@@ -115,7 +117,6 @@ export const Input: FC<Props> = React.memo(
           onChange={(e) => {
             setValue(e.target.value);
             setShowX(e.target.value.length > 0 ? true : false);
-            onChange && onChange(value);
           }}
         />
 
@@ -125,7 +126,6 @@ export const Input: FC<Props> = React.memo(
             onClick={() => {
               setValue("");
               setShowX(false);
-              onChange && onChange(value);
             }}
           >
             <IconCross />

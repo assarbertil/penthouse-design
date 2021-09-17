@@ -32,7 +32,8 @@ export const CheckboxButton: FC<Props> = ({
   let classes: string[] = [
     "flex items-center justify-between pointer-events-auto px-3 border shadow-xl cursor-pointer select-none peer-checked:bg-opacity-100 bg-opacity-40 rounded-xl",
   ];
-  let iconClasses: string[] = [""];
+  let containerClasses: string[] = [];
+  let iconClasses: string[] = [];
 
   switch (size) {
     case "sm":
@@ -79,10 +80,14 @@ export const CheckboxButton: FC<Props> = ({
       break;
   }
 
-  className && classes.push(className);
+  className && containerClasses.push(className);
 
   return (
-    <motion.div whileHover={clickable.hover} whileTap={clickable.tap}>
+    <motion.div
+      whileHover={clickable.hover}
+      whileTap={clickable.tap}
+      className={containerClasses.join(" ")}
+    >
       <input
         id={children}
         name={children}

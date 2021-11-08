@@ -3,7 +3,7 @@ This is a pack of UI components, colors and animation presets for use in React p
 
 ```bash
 npm install penthouse-design
-or
+# or
 yarn add penthouse-design
 ```
 

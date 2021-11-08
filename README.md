@@ -1,5 +1,7 @@
 # Penthouse Design system
-This is a pack of UI components, colors and animation presets for use in React projects. The pack is available as an NPM package.
+This is a pack of UI components, colors and animation presets for use in React projects. 
+
+##The pack is available as an NPM package.
 
 ```bash
 npm install penthouse-design

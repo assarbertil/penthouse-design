@@ -10,20 +10,20 @@ yarn add penthouse-design
 ## Exports
 Import any of these desctructured
 ### UI components
-- Text
-- Button
-- CheckboxButton
-- Input
+- `Text`
+- `Button`
+- `CheckboxButton`
+- `Input`
 
 ### Theme
-- tailwindPreset
+- `tailwindPreset`
 
 ### Animations
-- clickable
-- clickableWithScale
-- appear
-- basicStaggering
-- slowStaggering
+- `clickable`
+- `clickableWithScale`
+- `appear`
+- `basicStaggering`
+- `slowStaggering`
 
 ## Local testing
 

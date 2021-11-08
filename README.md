@@ -1,7 +1,7 @@
 # Penthouse Design system
-This is a pack of UI components, colors and animation presets for use in React projects. 
+This is a pack of UI components, colors and animation presets for use in React projects. Everything is documented in TypeScript.
 
-##The pack is available as an NPM package.
+## Installation
 
 ```bash
 npm install penthouse-design
@@ -9,8 +9,16 @@ npm install penthouse-design
 yarn add penthouse-design
 ```
 
+You also need tailwind installed at a minimum version of 2.2
+
+
+Then add this to y
+
 ## Exports
-Import any of these desctructured
+Import any of these desctructured from "penthouse-design". Example:
+```javascript
+import { CheckboxButton } from "penthouse-design"
+```
 ### UI components
 - `Text`
 - `Button`

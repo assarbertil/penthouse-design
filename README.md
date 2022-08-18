@@ -11,11 +11,8 @@ yarn add penthouse-design
 
 You also need tailwind installed at a minimum version of 2.2
 
-
-Then add this to y
-
 ## Exports
-Import any of these desctructured from "penthouse-design". Example:
+These are the named exports from "penthouse-design". Example:
 ```javascript
 import { CheckboxButton } from "penthouse-design"
 ```
